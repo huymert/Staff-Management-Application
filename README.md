@@ -76,14 +76,14 @@ When cloning this repository, you need to manually add the following configurati
 3. Register an Android application in the Firebase project with the package name: `com.example.staff_management`.
 4. Download the `google-services.json` file and place it in the application directory:
    ```text
-   Staff_management_team9/app/google-services.json
+   Staff-Management-Application/app/google-services.json
    ```
 
 ### 2. RAG API Configuration
 The API keys and server endpoint details are stored locally.
 1. Open (or create) the `local.properties` file in the root directory of the project:
    ```text
-   Staff_management_team9/local.properties
+   Staff-Management-Application/local.properties
    ```
 2. Append the following lines (replace values with your own API endpoints and keys):
    ```properties
