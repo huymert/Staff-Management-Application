@@ -55,6 +55,7 @@ Here is the high-level architecture of our Staff Management platform, linking th
 The HR AI Chatbot helps answer company policies, salary calculations, and internal guidelines. It utilizes the **Gemini API** coupled with **Retrieval-Augmented Generation (RAG)** to provide accurate answers based on internal documents.
 
 * **RAG Backend Repository**: The RAG system was retrieved and customized from the repository of our team member **Le Tien Thang**: [rag-hr-chatbot](https://github.com/kubbies03/rag-hr-chatbot).
+* **Server Note**: Since the RAG backend server is hosted locally (or tunneled via services like ngrok) during development, the AI Chatbot feature in the pre-built app will only respond when the developer's backend server is active. Otherwise, it will return a network timeout/connection error.
 
 ---
 
