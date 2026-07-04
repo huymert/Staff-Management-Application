@@ -4,6 +4,52 @@ A comprehensive mobile staff management application integrated with a RAG-based 
 
 ---
 
+## 📸 App Screenshots & Architecture
+
+### 🏗️ System Architecture & Workflow
+
+Here is the high-level architecture of our Staff Management platform, linking the Android application with Firebase services and the RAG-based AI chatbot server:
+
+<p align="center">
+  <img src="screenshots/system_architecture.png" alt="System Architecture" width="80%">
+</p>
+
+#### Key Workflows:
+* **AI Chatbot flow**:
+  <p align="center">
+    <img src="screenshots/rag_chatbot_flow.png" alt="RAG Chatbot Workflow" width="70%">
+  </p>
+
+* **Role-Based Access Control (RBAC)**:
+  <p align="center">
+    <img src="screenshots/rbac_flow.png" alt="RBAC flow" width="60%">
+  </p>
+
+---
+
+### 📱 User Interface (UI) Showcase
+
+#### 1. Core Dashboards (Role-Based)
+
+| Admin Dashboard | Manager Dashboard | Employee Dashboard |
+| :---: | :---: | :---: |
+| <img src="screenshots/admin_dashboard.png" width="220px"> | <img src="screenshots/manager_dashboard.png" width="220px"> | <img src="screenshots/employee_dashboard.png" width="220px"> |
+| User management, logs, and global permissions | Staff attendance, task assignments, and leaves | Individual check-ins, personal tasks, and chat |
+
+#### 2. Key Features & Tools
+
+| Login & Authentication | Real-time Chat Room | AI Assistant Chat |
+| :---: | :---: | :---: |
+| <img src="screenshots/login_screen.png" width="220px"> | <img src="screenshots/chat_room.png" width="220px"> | <img src="screenshots/ai_assistant_chat.png" width="220px"> |
+| Secure auth via Firebase | Real-time 1-1 & group chats | Quick answers to company policy queries |
+
+| Calendar Attendance | Task Board | Salary & Statistics |
+| :---: | :---: | :---: |
+| <img src="screenshots/calendar_attendance.png" width="220px"> | <img src="screenshots/task_list.png" width="220px"> | <img src="screenshots/charts_statistics.png" width="220px"> |
+| Month-view attendance grid | Progress tracking & assignment | Integrated calculation & distribution charts |
+
+---
+
 ## 🤖 AI Chatbot & RAG Backend
 
 The HR AI Chatbot helps answer company policies, salary calculations, and internal guidelines. It utilizes the **Gemini API** coupled with **Retrieval-Augmented Generation (RAG)** to provide accurate answers based on internal documents.
@@ -62,12 +108,6 @@ To align with professional **QC/Tester** standards, a structured testing workflo
    * **UI/UX Testing**: Inspected responsive layouts across different screen densities and verified visual feedback matching Material Design.
    * **Boundary Value Analysis (BVA)**: Applied to salary input fields, attendance reports, and user registration forms.
    * **API Testing**: Utilized Postman to test backend RAG endpoints independently prior to integrating them with the Android front-end.
-
----
-
-## 📂 Project Documentation (Reports & Slides)
-
-To keep this codebase repository lightweight, the large project report (`.docx`) and presentation slides (`.pptx`) are kept locally in the parent directory of this workspace and are excluded from the repository. Detailed schema, entity-relationship diagrams (ERDs), and use-case scenarios are instead documented within the source files and application interface flows.
 
 ---
 
