@@ -114,6 +114,6 @@ To align with professional **QC/Tester** standards, a structured testing workflo
 ## 📝 Disclaimers & Credits (Team Contributions)
 
 This project was built collaboratively by:
-* **Ha Gia Huy (Student ID: 22200070)** - Android Developer & QC/Tester: Requirement analysis, Auth, Account Management, Role-Based Access Control (RBAC), and conducted testing for the project (authored & executed 15+ manual test cases to validate authentication stability, input constraints, and role-based navigation).
-* **Vo Dinh Quoc (Student ID: 2220133)** - Android Developer: Employee Management, Attendance, Tasks, Leave Requests, Salary modules, and Cloud Firestore design.
-* **Le Tien Thang (Student ID: 2220144)** - Android Developer: Firebase Storage, FCM integration, real-time Group Chat, Gemini RAG Integration, and reporting.
+* **Ha Gia Huy** - Android Developer & QC/Tester: Requirement analysis, Auth, Account Management, Role-Based Access Control (RBAC), and conducted testing for the project (authored & executed 15+ manual test cases to validate authentication stability, input constraints, and role-based navigation).
+* **Vo Dinh Quoc** - Android Developer: Employee Management, Attendance, Tasks, Leave Requests, Salary modules, and Cloud Firestore design.
+* **Le Tien Thang** - Android Developer: Firebase Storage, FCM integration, real-time Group Chat, Gemini RAG Integration, and reporting.
