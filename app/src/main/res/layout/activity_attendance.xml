@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/attendance_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="#F2F7FA"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:id="@+id/topArea"
+        android:layout_width="0dp"
+        android:layout_height="172dp"
+        android:animation="@anim/fade_slide_down"
+        android:background="@drawable/bg_header_attendance_report"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/headerBar"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="10dp"
+                android:src="@android:drawable/ic_menu_revert"
+                app:tint="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:text="My Attendance"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/calendarHeaderCard"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="14dp"
+            android:animation="@anim/fade_slide_up"
+            app:cardBackgroundColor="#FAF7FF"
+            app:cardCornerRadius="26dp"
+            app:cardElevation="2dp"
+            app:strokeColor="#E4F7FB"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:id="@+id/calendarHeader"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
+
+                <ImageButton
+                    android:id="@+id/btnPrevMonth"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="10dp"
+                    android:src="@android:drawable/ic_media_previous"
+                    app:tint="#24B5D3" />
+
+                <TextView
+                    android:id="@+id/tvMonthYear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Month Year"
+                    android:textColor="#12313A"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/btnNextMonth"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="10dp"
+                    android:src="@android:drawable/ic_media_next"
+                    app:tint="#24B5D3" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </FrameLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/daysOfWeekLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp"
+        android:animation="@anim/fade_slide_up"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        app:columnCount="7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topArea">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:gravity="center"
+            android:text="Sun"
+            android:textColor="#FF5252"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_columnWeight="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:gravity="center"
+            android:text="Mon"
+            android:textColor="#12313A"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_columnWeight="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:gravity="center"
+            android:text="Tue"
+            android:textColor="#12313A"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_columnWeight="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:gravity="center"
+            android:text="Wed"
+            android:textColor="#12313A"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_columnWeight="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:gravity="center"
+            android:text="Thu"
+            android:textColor="#12313A"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_columnWeight="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:gravity="center"
+            android:text="Fri"
+            android:textColor="#12313A"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_columnWeight="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:gravity="center"
+            android:text="Sat"
+            android:textColor="#12313A"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_columnWeight="1" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/calendarCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="12dp"
+        android:animation="@anim/fade_slide_up"
+        app:cardBackgroundColor="#FAF7FF"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="2dp"
+        app:strokeColor="#E4F7FB"
+        app:strokeWidth="1dp"
+        app:layout_constraintBottom_toTopOf="@id/dayDetailsCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/daysOfWeekLayout">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCalendar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingStart="10dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="12dp" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/dayDetailsCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="14dp"
+        android:animation="@anim/fade_slide_up"
+        app:cardBackgroundColor="#FAF7FF"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="2dp"
+        app:strokeColor="#E4F7FB"
+        app:strokeWidth="1dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:id="@+id/tvSelectedDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selected Date"
+                android:textColor="#12313A"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="14dp"
+                android:background="#D8F8FC" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="7dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#D8F8FC"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="13dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Check-In"
+                            android:textColor="#6F9CAB"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvDetailCheckIn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="--:--"
+                            android:textColor="#24B5D3"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#D8F8FC"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="13dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Check-Out"
+                            android:textColor="#6F9CAB"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvDetailCheckOut"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="--:--"
+                            android:textColor="#24B5D3"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animation="@anim/fade_slide_up"
+        android:background="@android:color/white"
+        app:elevation="8dp"
+        app:itemIconTint="#24B5D3"
+        app:itemRippleColor="#3324B5D3"
+        app:itemTextColor="#6F9CAB"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/employee_bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

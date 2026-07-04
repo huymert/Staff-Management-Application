@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#0F172A</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Legacy giữ để không lỗi resource -->
+    <color name="light_purple">#D8F3F8</color>
+    <color name="blue_primary">#24B5D3</color>
+    <color name="amber_primary">#24B5D3</color>
+
+    <!-- Brand -->
+    <color name="brand_primary">#24B5D3</color>
+    <color name="brand_primary_dark">#169BBC</color>
+    <color name="brand_primary_container">#D8F3F8</color>
+
+    <color name="blue_dark">#12313A</color>
+
+    <!-- Role -->
+    <color name="role_admin">#24B5D3</color>
+    <color name="role_admin_container">#D8F3F8</color>
+
+    <color name="role_manager">#1DA9C6</color>
+    <color name="role_manager_container">#E6F8FC</color>
+
+    <color name="role_employee">#39C3DD</color>
+    <color name="role_employee_container">#ECFAFD</color>
+
+    <!-- Surface -->
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F7FDFF</color>
+
+    <color name="outline">#D8F3F8</color>
+    <color name="outline_subtle">#ECFAFD</color>
+    <color name="divider">#E6F8FC</color>
+
+    <!-- Text -->
+    <color name="text_primary">#12313A</color>
+    <color name="text_secondary">#6F9CAB</color>
+    <color name="text_tertiary">#9CB4BB</color>
+    <color name="text_on_primary">#FFFFFF</color>
+
+    <!-- Semantic -->
+    <color name="success">#00C48C</color>
+    <color name="success_container">#E6FFF6</color>
+
+    <color name="warning">#FF9F1C</color>
+    <color name="warning_container">#FFF4D8</color>
+
+    <color name="error">#FF5C5C</color>
+    <color name="error_container">#FFECEC</color>
+
+    <!-- Priority -->
+    <color name="priority_high">#FF5C5C</color>
+    <color name="priority_medium">#FFB020</color>
+    <color name="priority_low">#00C48C</color>
+
+    <!-- Chat -->
+    <color name="chat_bg">#ECFAFD</color>
+    <color name="chat_received_bubble">#F2FBFE</color>
+    <color name="chat_sent_bubble">#24B5D3</color>
+    <color name="chat_text_received">#12313A</color>
+    <color name="chat_text_sent">#FFFFFF</color>
+
+    <color name="scrim">#4D000000</color>
+
+</resources>

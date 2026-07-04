@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Chat Colors Dark -->
+    <color name="chat_bg">#121212</color>
+    <color name="chat_received_bubble">#3A3B3C</color>
+    <color name="chat_text_received">#E4E6EB</color>
+</resources>

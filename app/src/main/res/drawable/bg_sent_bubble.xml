@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/chat_sent_bubble" />
+    <corners
+        android:topLeftRadius="@dimen/radius_lg"
+        android:topRightRadius="@dimen/radius_lg"
+        android:bottomLeftRadius="@dimen/radius_lg"
+        android:bottomRightRadius="4dp" />
+</shape>
