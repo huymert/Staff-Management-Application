@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing (8-point grid) -->
+    <dimen name="space_xxs">4dp</dimen>
+    <dimen name="space_xs">8dp</dimen>
+    <dimen name="space_sm">12dp</dimen>
+    <dimen name="space_md">16dp</dimen>
+    <dimen name="space_lg">24dp</dimen>
+    <dimen name="space_xl">32dp</dimen>
+    <dimen name="space_xxl">48dp</dimen>
+
+    <!-- Screen padding -->
+    <dimen name="screen_padding">20dp</dimen>
+    <dimen name="card_padding">16dp</dimen>
+
+    <!-- Corner radii -->
+    <dimen name="radius_sm">8dp</dimen>
+    <dimen name="radius_md">12dp</dimen>
+    <dimen name="radius_lg">16dp</dimen>
+    <dimen name="radius_xl">24dp</dimen>
+    <dimen name="radius_pill">999dp</dimen>
+
+    <!-- Icon sizes -->
+    <dimen name="icon_md">24dp</dimen>
+    <dimen name="icon_lg">32dp</dimen>
+    <dimen name="icon_xl">48dp</dimen>
+
+    <!-- Avatar sizes -->
+    <dimen name="avatar_md">48dp</dimen>
+    <dimen name="avatar_lg">64dp</dimen>
+
+    <!-- Touch targets -->
+    <dimen name="touch_target_min">48dp</dimen>
+    <dimen name="button_height">52dp</dimen>
+
+    <!-- Elevation -->
+    <dimen name="elevation_1">1dp</dimen>
+    <dimen name="elevation_2">3dp</dimen>
+    <dimen name="elevation_3">6dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="text_display">32sp</dimen>
+    <dimen name="text_h1">24sp</dimen>
+    <dimen name="text_h2">20sp</dimen>
+    <dimen name="text_h3">18sp</dimen>
+    <dimen name="text_body_lg">16sp</dimen>
+    <dimen name="text_body">14sp</dimen>
+    <dimen name="text_caption">12sp</dimen>
+    <dimen name="text_label">11sp</dimen>
+
+    <!-- Component specific -->
+    <dimen name="bottom_nav_height">64dp</dimen>
+    <dimen name="appbar_height">56dp</dimen>
+</resources>

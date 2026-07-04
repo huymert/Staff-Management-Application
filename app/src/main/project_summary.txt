@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Staff_management">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".AdminDashboardActivity" />
+        <activity android:name=".EmployeeDashboardActivity" />
+        <activity android:name=".AddStaffActivity" />
+        <activity android:name=".EmployeeListActivity" />
+        <activity android:name=".AttendanceActivity" />
+        <activity android:name=".AttendanceReportActivity" />
+        <activity android:name=".SalaryCalculationActivity" />
+        <activity android:name=".UserListChatActivity" />
+        <activity
+            android:name=".ChatRoomActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ManagerDashboardActivity" />
+        <activity android:name=".EmployeeDetailActivity" />
+        <activity android:name=".StatisticsActivity" />
+        <activity android:name=".TaskActivity" />
+        <activity android:name=".ManagerTaskActivity" />
+        <activity android:name=".LeaveRequestActivity" />
+
+        <!-- FCM Service -->
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+    </application>
+</manifest>
+ 
+--- CAU TRUC THU MUC JAVA --- 
+Folder PATH listing for volume Windows-SSD
+Volume serial number is 98FE-53E0
+C:\USERS\HAHUY\ANDROIDSTUDIOPROJECTS\STAFF_MANAGEMENT_NEW (2)\STAFF_MANAGEMENT_NEW\APP\SRC\MAIN\JAVA
+\---com
+    \---example
+        \---staff_management
+            |   AddStaffActivity.java
+            |   AdminDashboardActivity.java
+            |   AiAssistant.java
+            |   AttendanceActivity.java
+            |   AttendanceReportActivity.java
+            |   BaseActivity.java
+            |   ChatRoomActivity.java
+            |   EmployeeDashboardActivity.java
+            |   EmployeeDetailActivity.java
+            |   EmployeeListActivity.java
+            |   LeaveRequestActivity.java
+            |   LoginActivity.java
+            |   MainActivity.java
+            |   ManagerDashboardActivity.java
+            |   ManagerTaskActivity.java
+            |   MyFirebaseMessagingService.java
+            |   SalaryCalculationActivity.java
+            |   StatisticsActivity.java
+            |   TaskActivity.java
+            |   UserListChatActivity.java
+            |   
+            +---adapters
+            |       EmployeeAdapter.java
+            |       LeaveRequestAdapter.java
+            |       TaskAdapter.java
+            |       
+            +---models
+            |       LeaveRequest.java
+            |       Message.java
+            |       Task.java
+            |       User.java
+            |       
+            +---utils
+            |       FirebaseRepository.java
+            |       LocaleHelper.java
+            |       NotificationHelper.java
+            |       ProductivityCalculator.java
+            |       
+            \---viewmodel
+                    TaskListViewModel.java
+                    
+ 
+--- CAU TRUC THU MUC RES --- 
+Folder PATH listing for volume Windows-SSD
+Volume serial number is 98FE-53E0
+C:\USERS\HAHUY\ANDROIDSTUDIOPROJECTS\STAFF_MANAGEMENT_NEW (2)\STAFF_MANAGEMENT_NEW\APP\SRC\MAIN\RES\LAYOUT
+    activity_add_staff.xml
+    activity_admin_dashboard.xml
+    activity_attendance.xml
+    activity_attendance_report.xml
+    activity_chat_room.xml
+    activity_employee_dashboard.xml
+    activity_employee_detail.xml
+    activity_employee_list.xml
+    activity_leave_request.xml
+    activity_login.xml
+    activity_manager_dashboard.xml
+    activity_manager_task.xml
+    activity_salary_calculation.xml
+    activity_statistics.xml
+    activity_task.xml
+    activity_user_list_chat.xml
+    dialog_ai_chat.xml
+    dialog_assign_task.xml
+    dialog_change_password.xml
+    dialog_employee_attendance.xml
+    dialog_forgot_password.xml
+    dialog_image_options.xml
+    dialog_leave_request.xml
+    item_calendar_day.xml
+    item_detail_info.xml
+    item_employee.xml
+    item_leave_request.xml
+    item_message_received.xml
+    item_message_sent.xml
+    item_salary.xml
+    item_task.xml
+    item_user_chat.xml
+    
+No subfolders exist 
+

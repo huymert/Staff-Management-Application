@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/space_xs"
+    android:paddingVertical="@dimen/space_xxs">
+
+    <TextView
+        android:id="@+id/tvSenderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_xs"
+        style="@style/Text.Label"
+        android:text="Sender Name" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/bg_received_bubble"
+        android:maxWidth="280dp"
+        android:paddingHorizontal="@dimen/space_sm"
+        android:paddingVertical="@dimen/space_xs"
+        android:text="Received message text"
+        android:textColor="@color/chat_text_received"
+        android:textSize="@dimen/text_body_lg"
+        android:lineSpacingMultiplier="1.3" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_xs"
+        android:layout_marginTop="2dp"
+        style="@style/Text.Caption"
+        android:text="12:00" />
+
+</LinearLayout>

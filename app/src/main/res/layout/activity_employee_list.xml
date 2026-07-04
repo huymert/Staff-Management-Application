@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/managerEmployeesRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="#F2F7FA">
+
+    <FrameLayout
+        android:id="@+id/headerBackground"
+        android:layout_width="0dp"
+        android:layout_height="172dp"
+        android:animation="@anim/fade_slide_down"
+        android:background="@drawable/bg_header_attendance_report"
+        android:elevation="0dp"
+        android:outlineProvider="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_gravity="start|top"
+            android:layout_marginStart="-90dp"
+            android:layout_marginTop="8dp"
+            android:alpha="0.22"
+            android:background="@drawable/bg_texture_circle" />
+
+        <View
+            android:layout_width="145dp"
+            android:layout_height="145dp"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="-52dp"
+            android:layout_marginBottom="8dp"
+            android:alpha="0.18"
+            android:background="@drawable/bg_texture_circle" />
+
+        <LinearLayout
+            android:id="@+id/headerContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="20dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="10dp"
+                android:src="@drawable/ic_back_arrow"
+                app:tint="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/Text.H2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/nav_employees"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/dateContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="90dp"
+            app:cardBackgroundColor="#33FFFFFF"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#66FFFFFF"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:id="@+id/tvCurrentDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.02"
+                android:paddingStart="14dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="6dp"
+                android:text="@string/date_placeholder"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </com.google.android.material.card.MaterialCardView>
+    </FrameLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/statsCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="-46dp"
+        android:layout_marginEnd="18dp"
+        android:animation="@anim/fade_slide_up"
+        app:cardBackgroundColor="#FAF7FF"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="2dp"
+        app:strokeColor="#E4F7FB"
+        app:strokeWidth="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTotalCount"
+                    style="@style/Text.H1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#24B5D3" />
+
+                <TextView
+                    style="@style/Text.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_label"
+                    android:textColor="#6F9CAB" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="46dp"
+                android:background="#D8F8FC" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvPresentCount"
+                    style="@style/Text.H1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#00A86B" />
+
+                <TextView
+                    style="@style/Text.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/present_label"
+                    android:textColor="#6F9CAB" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="46dp"
+                android:background="#D8F8FC" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvAbsentCount"
+                    style="@style/Text.H1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/error" />
+
+                <TextView
+                    style="@style/Text.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/absent_label"
+                    android:textColor="#6F9CAB" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp"
+        android:animation="@anim/fade_slide_up"
+        android:background="#FAF7FF"
+        app:tabBackground="@drawable/bg_tab"
+        app:tabIndicatorColor="#24B5D3"
+        app:tabIndicatorHeight="3dp"
+        app:tabMode="fixed"
+        app:tabRippleColor="#3324B5D3"
+        app:tabSelectedTextColor="#24B5D3"
+        app:tabTextColor="#6F9CAB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statsCard">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/all_label" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/present_label" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/absent_label" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <View
+        android:id="@+id/tabDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#D8F8FC"
+        app:layout_constraintEnd_toEndOf="@id/tabLayout"
+        app:layout_constraintStart_toStartOf="@id/tabLayout"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/listCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="12dp"
+        android:animation="@anim/fade_slide_up"
+        app:cardBackgroundColor="#FAF7FF"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="2dp"
+        app:strokeColor="#E4F7FB"
+        app:strokeWidth="1dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabDivider">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvEmployees"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:padding="10dp"
+            android:paddingBottom="100dp" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddStaff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="26dp"
+        android:animation="@anim/button_pop"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="#24B5D3"
+        app:elevation="6dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@android:color/white" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:animation="@anim/fade_slide_up"
+        android:background="@android:color/white"
+        android:clipToPadding="false"
+        android:paddingStart="8dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="12dp"
+        android:visibility="gone"
+        app:elevation="8dp"
+        app:itemIconSize="22dp"
+        app:itemIconTint="#24B5D3"
+        app:itemRippleColor="#3324B5D3"
+        app:itemTextColor="#24B5D3"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/manager_bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

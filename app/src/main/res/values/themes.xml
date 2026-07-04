@@ -1,0 +1,41 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Staff_management" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorOnPrimary">@color/text_on_primary</item>
+        <item name="colorPrimaryContainer">@color/brand_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/brand_primary_dark</item>
+        <item name="colorSecondary">@color/brand_primary</item>
+        <item name="colorOnSecondary">@color/text_on_primary</item>
+        <item name="colorSecondaryContainer">@color/brand_primary_container</item>
+        <item name="colorOnSecondaryContainer">@color/brand_primary_dark</item>
+        <item name="colorTertiary">@color/light_purple</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="android:statusBarColor">@color/brand_primary_dark</item>
+        <item name="android:navigationBarColor">@color/surface</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.StaffManagement.BottomSheet</item>
+    </style>
+
+    <style name="Theme.Staff_management" parent="Base.Theme.Staff_management" />
+
+    <style name="ThemeOverlay.StaffManagement.BottomSheet" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.StaffManagement.BottomSheet</item>
+    </style>
+
+    <style name="Widget.StaffManagement.BottomSheet" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="android:backgroundTint">@color/surface</item>
+    </style>
+
+    <style name="CircleImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="RoundedImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">18dp</item>
+    </style>
+</resources>
