@@ -4,18 +4,6 @@ A comprehensive mobile staff management application integrated with a RAG-based 
 
 ---
 
-## 👥 Team Members & Contributions
-
-The project was collaboratively developed by a team of three members with clear division of roles:
-
-| Member | Student ID | Primary Role | Contributions & Deliverables |
-| :--- | :--- | :--- | :--- |
-| **Ha Gia Huy** | **22200070** | **Android Developer & QC/Tester** | - Conducted system requirement analysis and designed UI/UX screens complying with Material Design guidelines.<br>- Built Authentication, Account Management, and Role-Based Access Control (RBAC) for Admin, Manager, and Employee roles.<br>- Integrated Firebase Authentication.<br>- **QA/Testing Lead**: Formulated the test plan, designed test scenarios, and authored & executed **15+ comprehensive manual test cases** validating authentication stability, input field constraints, and role-based interface navigation flows. |
-| **Vo Dinh Quoc** | 2220133 | Android Developer | - Developed core business logic modules: Employee Management (CRUD), Attendance tracking, Task assignment (Task Management), Leave Requests, and Salary Calculation.<br>- Designed and implemented analytical data charts.<br>- Modeled the Cloud Firestore database schema (Firestore Collections). |
-| **Le Tien Thang** | 2220144 | Android Developer | - Integrated Firebase Storage (media upload) and Firebase Cloud Messaging (FCM) for real-time push notifications.<br>- Developed the real-time Group Chat feature.<br>- Integrated the AI Chatbot Assistant powered by Gemini API and a custom RAG backend.<br>- Performed system-wide integration testing and compiled the project report. |
-
----
-
 ## 🤖 AI Chatbot & RAG Backend
 
 The HR AI Chatbot helps answer company policies, salary calculations, and internal guidelines. It utilizes the **Gemini API** coupled with **Retrieval-Augmented Generation (RAG)** to provide accurate answers based on internal documents.
@@ -34,10 +22,9 @@ The HR AI Chatbot helps answer company policies, salary calculations, and intern
 
 ## ⚙️ Project Setup & Installation (Post-Clone Guide)
 
-For security reasons, sensitive configuration files containing API keys and Firebase credentials **are git-ignored**. You must configure these manually after cloning the repository:
+When cloning this repository, you need to manually add the following configuration files and credentials to run the project locally:
 
 ### 1. Firebase Configuration
-This application relies on Firebase services. To connect it to your Firebase instance:
 1. Create a project on the [Firebase Console](https://console.firebase.google.com/).
 2. Enable **Authentication**, **Cloud Firestore**, **Cloud Storage**, and **Cloud Messaging**.
 3. Register an Android application in the Firebase project with the package name: `com.example.staff_management`.
@@ -60,7 +47,6 @@ The API keys and server endpoint details are stored locally.
    # API authentication token
    RAG_API_KEY=your_rag_api_key_here
    ```
-*(Note: `local.properties` is already added to `.gitignore` and will never be pushed to your repository).*
 
 ---
 
@@ -82,3 +68,12 @@ To align with professional **QC/Tester** standards, a structured testing workflo
 ## 📂 Project Documentation (Reports & Slides)
 
 To keep this codebase repository lightweight, the large project report (`.docx`) and presentation slides (`.pptx`) are kept locally in the parent directory of this workspace and are excluded from the repository. Detailed schema, entity-relationship diagrams (ERDs), and use-case scenarios are instead documented within the source files and application interface flows.
+
+---
+
+## 📝 Disclaimers & Credits (Team Contributions)
+
+This project was built collaboratively by:
+* **Ha Gia Huy (Student ID: 22200070)** - Android Developer & QC/Tester: Requirement analysis, Material UI/UX design, Auth, Account Management, Role-Based Access Control (RBAC), and lead manual tester (authored & executed 15+ test cases for authentication stability, input constraints, and role navigation).
+* **Vo Dinh Quoc (Student ID: 2220133)** - Android Developer: Employee Management, Attendance, Tasks, Leave Requests, Salary modules, and Cloud Firestore design.
+* **Le Tien Thang (Student ID: 2220144)** - Android Developer: Firebase Storage, FCM integration, real-time Group Chat, Gemini RAG Integration, and reporting.
