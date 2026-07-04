@@ -1,82 +1,84 @@
 # Staff Management Application
 
-Một ứng dụng di động quản lý nhân sự toàn diện tích hợp Trợ lý ảo AI phục vụ cho doanh nghiệp. Dự án này là **Đồ án môn học Lập trình di động** tại **Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM (VNU-HCM University of Science)**.
+A comprehensive mobile staff management application integrated with a RAG-based AI Assistant. This project was developed as a **Mobile Programming Course Project** at the **VNU-HCM University of Science (University of Science, VNU-HCM)**.
 
 ---
 
-## 👥 Thành viên nhóm & Phân chia công việc
+## 👥 Team Members & Contributions
 
-Dự án được phát triển bởi nhóm 3 thành viên với sự phân chia vai trò rõ ràng:
+The project was collaboratively developed by a team of three members with clear division of roles:
 
-| Thành viên | MSSV | Vai trò chính | Công việc thực hiện |
+| Member | Student ID | Primary Role | Contributions & Deliverables |
 | :--- | :--- | :--- | :--- |
-| **Hà Gia Huy** | **22200070** | **Android Developer & QC/Tester** | - Phân tích yêu cầu hệ thống và thiết kế giao diện UI/UX theo tiêu chuẩn Material Design.<br>- Xây dựng chức năng Đăng nhập, Quản lý tài khoản, Phân quyền người dùng (Admin/Manager/Employee).<br>- Tích hợp Firebase Authentication.<br>- **Đảm nhận vai trò QC**: Lên kế hoạch kiểm thử (Test Plan), thiết kế kịch bản (Test Scenario), viết và thực thi **15+ manual test cases** xác thực độ ổn định của tính năng Đăng nhập, Phân quyền (RBAC), kiểm tra ràng buộc dữ liệu đầu vào và các luồng điều hướng giao diện. |
-| **Võ Đình Quốc** | 2220133 | Android Developer | - Phát triển các tính năng nghiệp vụ: Quản lý nhân sự, Chấm công, Quản lý & giao việc (Task), Yêu cầu nghỉ phép (Leave Request), Tính lương.<br>- Xây dựng biểu đồ thống kê dữ liệu trực quan.<br>- Thiết kế cấu trúc cơ sở dữ liệu Cloud Firestore (Firestore Collections). |
-| **Lê Tiến Thắng** | 2220144 | Android Developer | - Tích hợp Firebase Storage (lưu trữ hình ảnh, tài liệu) và Firebase Cloud Messaging (gửi thông báo đẩy thời gian thực).<br>- Phát triển tính năng Trò chuyện nhóm (Real-time Chat).<br>- Tích hợp hệ thống AI Chatbot Assistant (kết nối với RAG Backend) giúp giải đáp quy chế nhân sự.<br>- Kiểm thử hệ thống và viết báo cáo đồ án. |
+| **Ha Gia Huy** | **22200070** | **Android Developer & QC/Tester** | - Conducted system requirement analysis and designed UI/UX screens complying with Material Design guidelines.<br>- Built Authentication, Account Management, and Role-Based Access Control (RBAC) for Admin, Manager, and Employee roles.<br>- Integrated Firebase Authentication.<br>- **QA/Testing Lead**: Formulated the test plan, designed test scenarios, and authored & executed **15+ comprehensive manual test cases** validating authentication stability, input field constraints, and role-based interface navigation flows. |
+| **Vo Dinh Quoc** | 2220133 | Android Developer | - Developed core business logic modules: Employee Management (CRUD), Attendance tracking, Task assignment (Task Management), Leave Requests, and Salary Calculation.<br>- Designed and implemented analytical data charts.<br>- Modeled the Cloud Firestore database schema (Firestore Collections). |
+| **Le Tien Thang** | 2220144 | Android Developer | - Integrated Firebase Storage (media upload) and Firebase Cloud Messaging (FCM) for real-time push notifications.<br>- Developed the real-time Group Chat feature.<br>- Integrated the AI Chatbot Assistant powered by Gemini API and a custom RAG backend.<br>- Performed system-wide integration testing and compiled the project report. |
 
 ---
 
-## 🤖 Hệ thống AI Chatbot & RAG Backend
+## 🤖 AI Chatbot & RAG Backend
 
-Chức năng trợ lý ảo AI trợ giúp giải đáp thắc mắc về nội quy, chế độ lương thưởng và quy chế của doanh nghiệp được xây dựng dựa trên mô hình **Gemini API** kết hợp kỹ thuật **RAG (Retrieval-Augmented Generation)** để đảm bảo thông tin trả về chính xác theo tài liệu nội bộ.
+The HR AI Chatbot helps answer company policies, salary calculations, and internal guidelines. It utilizes the **Gemini API** coupled with **Retrieval-Augmented Generation (RAG)** to provide accurate answers based on internal documents.
 
-* **RAG Backend Repository**: Hệ thống RAG được lấy và tùy chỉnh từ dự án của thành viên **Lê Tiến Thắng**: [rag-hr-chatbot](https://github.com/kubbies03/rag-hr-chatbot).
-
----
-
-## 🛠️ Công nghệ sử dụng
-
-* **Ngôn ngữ & Công cụ**: Java, Android Studio (Gradle).
-* **Database & Cloud Services**: Firebase (Authentication, Cloud Firestore, Cloud Storage, Cloud FCM).
-* **Thư viện bên thứ ba**: OkHttp (gọi RAG API), Gson, MPAndroidChart (vẽ biểu đồ lương và thống kê), Glide (load hình ảnh).
+* **RAG Backend Repository**: The RAG system was retrieved and customized from the repository of our team member **Le Tien Thang**: [rag-hr-chatbot](https://github.com/kubbies03/rag-hr-chatbot).
 
 ---
 
-## ⚙️ Hướng dẫn thiết lập & Cài đặt khi Clone dự án
+## 🛠️ Technology Stack
 
-Để bảo mật thông tin, các tệp cấu hình chứa API key và liên kết Firebase **không được đẩy lên GitHub**. Khi clone dự án về, bạn cần cấu hình lại các thành phần sau:
+* **Language & IDE**: Java, Android Studio (Gradle).
+* **Database & Cloud Services**: Firebase (Authentication, Cloud Firestore, Cloud Storage, Cloud Messaging).
+* **Libraries**: OkHttp (REST API client for RAG), Gson (JSON parsing), MPAndroidChart (data visualization), Glide (image loading).
 
-### 1. Cấu hình Firebase
-Dự án sử dụng cơ sở dữ liệu Firebase. Để kết nối với Firebase của riêng bạn:
-1. Tạo dự án mới trên [Firebase Console](https://console.firebase.google.com/).
-2. Kích hoạt các dịch vụ: **Authentication**, **Cloud Firestore**, **Storage**, và **Cloud Messaging**.
-3. Thêm một ứng dụng Android vào dự án Firebase với package name: `com.example.staff_management`.
-4. Tải tệp `google-services.json` được cấp từ Firebase và đặt nó vào thư mục:
+---
+
+## ⚙️ Project Setup & Installation (Post-Clone Guide)
+
+For security reasons, sensitive configuration files containing API keys and Firebase credentials **are git-ignored**. You must configure these manually after cloning the repository:
+
+### 1. Firebase Configuration
+This application relies on Firebase services. To connect it to your Firebase instance:
+1. Create a project on the [Firebase Console](https://console.firebase.google.com/).
+2. Enable **Authentication**, **Cloud Firestore**, **Cloud Storage**, and **Cloud Messaging**.
+3. Register an Android application in the Firebase project with the package name: `com.example.staff_management`.
+4. Download the `google-services.json` file and place it in the application directory:
    ```text
    Staff_management_team9/app/google-services.json
    ```
 
-### 2. Cấu hình API RAG Chatbot
-Các khóa bảo mật và URL của Server RAG được lưu trữ cục bộ. Hãy cấu hình như sau:
-1. Mở file [local.properties](file:///d:/Staff_management_team9/Staff_management_team9/local.properties) (hoặc tạo mới nếu chưa có ở thư mục gốc của dự án).
-2. Thêm các dòng cấu hình sau (thay thế giá trị bằng Server URL và API Key của bạn):
+### 2. RAG API Configuration
+The API keys and server endpoint details are stored locally.
+1. Open (or create) the `local.properties` file in the root directory of the project:
+   ```text
+   Staff_management_team9/local.properties
+   ```
+2. Append the following lines (replace values with your own API endpoints and keys):
    ```properties
-   # URL của RAG API Backend
+   # URL of your RAG API server
    RAG_BASE_URL=https://your-rag-backend-api-url.com
    
-   # API Key để xác thực với RAG Backend
+   # API authentication token
    RAG_API_KEY=your_rag_api_key_here
    ```
-*(Lưu ý: File `local.properties` đã được liệt kê trong `.gitignore` nên sẽ không bị push lên repository của bạn).*
+*(Note: `local.properties` is already added to `.gitignore` and will never be pushed to your repository).*
 
 ---
 
-## 🔍 Kiểm thử & Đảm bảo Chất lượng (QC/Testing)
+## 🔍 Quality Assurance & Testing (QC Showcase)
 
-Với định hướng ứng tuyển vị trí **QC/Tester**, chức năng kiểm thử trong dự án này được thực hiện bài bản với quy trình như sau:
+To align with professional **QC/Tester** standards, a structured testing workflow was implemented during development:
 
-1. **Phân tích yêu cầu (Requirement Analysis)**: Xác định rõ ràng các điều kiện biên của các trường dữ liệu (ví dụ: định dạng email, mật khẩu tối thiểu 6 ký tự, số điện thoại hợp lệ).
-2. **Thiết kế Kịch bản kiểm thử (Test Scenarios) & Viết Test Cases**:
-   * Thiết kế hơn 15+ manual test cases chi tiết để bao phủ toàn bộ luồng hoạt động chính của hệ thống xác thực.
-   * Tập trung kiểm thử phân quyền (RBAC - Role-Based Access Control) để đảm bảo tài khoản Employee không thể truy cập vào các màn hình quản trị của Admin/Manager.
-3. **Thực thi kiểm thử (Test Execution)**:
-   * **UI/UX Testing**: Kiểm tra hiển thị giao diện trên các kích thước màn hình khác nhau, đảm bảo khoảng cách hiển thị và phản hồi của nút bấm chuẩn Material Design.
-   * **Boundary Value Analysis (Phân tích giá trị biên)**: Áp dụng khi nhập thông tin lương, chấm công và kiểm tra form đăng ký.
-   * **API Testing**: Sử dụng Postman để kiểm tra độc lập các API kết nối với server RAG trước khi tích hợp vào ứng dụng Android.
+1. **Requirement Analysis**: Outlined data validation limits (e.g., email patterns, password constraints with minimum 6 characters, phone number formats).
+2. **Test Design**:
+   * Authored 15+ comprehensive test cases covering authentication flows and input validation bounds.
+   * Conducted extensive Role-Based Access Control (RBAC) tests to verify that Employee accounts are strictly restricted from accessing Admin/Manager dashboard routes.
+3. **Execution & Bug Tracking**:
+   * **UI/UX Testing**: Inspected responsive layouts across different screen densities and verified visual feedback matching Material Design.
+   * **Boundary Value Analysis (BVA)**: Applied to salary input fields, attendance reports, and user registration forms.
+   * **API Testing**: Utilized Postman to test backend RAG endpoints independently prior to integrating them with the Android front-end.
 
 ---
 
-## 📂 Tài liệu liên quan (Báo cáo & Slide)
+## 📂 Project Documentation (Reports & Slides)
 
-Để giữ cho repository gọn nhẹ và chuyên nghiệp, các file tài liệu lớn gồm **file Báo cáo Đồ án (`.docx`)** và **file Slide thuyết trình (`.pptx`)** được lưu trữ cục bộ tại thư mục gốc của dự án trên máy phát triển và không được đẩy lên GitHub. 
-* Bạn có thể tham khảo trực tiếp thông tin tổng quan, sơ đồ thực thể (ERD), và kịch bản sử dụng (Use Case) chi tiết được mô tả trực quan ngay trong mã nguồn và giao diện ứng dụng.
+To keep this codebase repository lightweight, the large project report (`.docx`) and presentation slides (`.pptx`) are kept locally in the parent directory of this workspace and are excluded from the repository. Detailed schema, entity-relationship diagrams (ERDs), and use-case scenarios are instead documented within the source files and application interface flows.
