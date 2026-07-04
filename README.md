@@ -111,7 +111,7 @@ To align with professional **QC/Tester** standards, a structured testing workflo
 
 ---
 
-## 📝 Disclaimers & Credits (Team Contributions)
+## 👥 Team & Credits
 
 This project was built collaboratively by:
 * **Ha Gia Huy** - Android Developer & QC/Tester: Requirement analysis, Auth, Account Management, Role-Based Access Control (RBAC), and conducted testing for the project (authored & executed 15+ manual test cases to validate authentication stability, input constraints, and role-based navigation).
