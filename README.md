@@ -110,7 +110,7 @@ To align with professional **QC/Tester** standards, a structured testing workflo
    * **Boundary Value Analysis (BVA)**: Applied to salary input fields, attendance reports, and user registration forms.
    * **API Testing**: Utilized Postman to test backend RAG endpoints independently prior to integrating them with the Android front-end.
 
-💡 **Portfolio Showcase**: Check out our complete manual test case list and execution status in [TEST_CASES.md](TEST_CASES.md).
+👉 **Manual Test Cases**: The complete manual test case suite and execution status are documented in [TEST_CASES.md](TEST_CASES.md).
 
 ---
 
